@@ -1,0 +1,34 @@
+//https://codeforces.com/group/FWyJjChFAe/contest/328360/problem/I
+#include<bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+
+
+
+int n,i,cnt;
+string s;
+
+void solve(string x){
+	i=0;
+	while(i<n){
+		int idx=-1;
+		if((idx=s.find(x,i)) != -1){
+			i=idx+2;cnt++;
+		}
+		else break;
+	}
+}
+int main(){
+	ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+	
+	cin>>n>>s;
+	solve("haha");
+	solve("hoho");
+	solve("hehe");
+
+	cout<<cnt<<endl;
+
+
+	return 0;
+}

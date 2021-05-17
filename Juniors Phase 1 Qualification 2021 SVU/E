@@ -1,0 +1,24 @@
+//https://codeforces.com/group/FWyJjChFAe/contest/328360/problem/E
+#include<bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+
+
+int main(){
+	ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+	
+	int n,m;
+	cin>>n>>m;
+	int steps = n+m-2;
+	for (int i = 0; i < n; ++i)
+		for (int j = 0; j < m; ++j)
+		{
+			bool x;cin>>x;
+			if(x)steps=min(steps,i+j);
+		}
+	
+	cout<<steps;
+
+	return 0;
+}

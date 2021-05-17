@@ -1,0 +1,29 @@
+//https://codeforces.com/group/FWyJjChFAe/contest/328360/problem/K
+#include<bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+
+
+
+int arr[100005];
+int main(){
+
+	ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+	
+	int n,cnt=0;
+	cin>>n;
+	ll sum=0;
+	for (int i = 0; i < n; ++i)
+	{
+		cin>>arr[i];
+		if(arr[i]<0)arr[i]=-arr[i],cnt++;
+		sum+=arr[i];
+	}
+	sort(arr,arr+n);
+	if(cnt%2==0)
+		cout<<sum;
+	else cout<<sum-(2*arr[0]);
+
+	return 0;
+}

@@ -1,0 +1,27 @@
+//https://codeforces.com/group/FWyJjChFAe/contest/328360/problem/F
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int vis[26];
+int main(){
+	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+
+	int n,m;
+	cin>>n>>m;
+	for (int i = 0; i < n; ++i)
+	{
+		for (int j = 0; j < m; ++j)
+		{
+			char c;cin>>c;
+			if(vis[c-'a']==i)
+				vis[c-'a']=i+1;
+		}
+	}
+	for (int i = 0; i < 26; ++i)
+	{
+		if(vis[i]==n)return cout<<"Yes",0;
+	}
+	cout<<"No";
+	return 0;
+}

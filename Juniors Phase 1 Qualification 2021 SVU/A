@@ -1,0 +1,32 @@
+//https://codeforces.com/group/FWyJjChFAe/contest/328360/problem/A
+#include<bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+
+
+int main(){
+	ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+
+	int n,i=0;
+	string s;
+	cin>>n>>s;
+
+	
+	for (int j = 0; j < n; ++j)
+	{
+		int num=0;
+		int idx=i;
+		while(isdigit(s[idx])){
+			num = num * 10 + (s[idx++]-'0');
+		}
+		string tmp="";
+		while(idx<(int)s.size() && isalpha(s[idx])){
+			tmp+=s[idx++];
+		}
+		i=idx;
+		while(num--)cout<<tmp;
+	
+	}
+ 	return 0;
+}

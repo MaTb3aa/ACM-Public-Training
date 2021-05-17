@@ -1,0 +1,21 @@
+//https://codeforces.com/group/FWyJjChFAe/contest/328360/problem/B
+#include<bits/stdc++.h>
+
+using namespace std;
+typedef long long ll;
+
+ll gcd(ll a,ll b){
+	return (!b ? a : gcd(b,a%b));
+}
+
+int main(){
+	ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+	int n;cin>>n;
+	ll g=0,x;
+	while(n--){
+		cin>>x;
+		g=gcd(g,x);
+	}
+	cout<<(g>1 ? "YES" : "NO");
+	return 0;
+}

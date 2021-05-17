@@ -1,0 +1,15 @@
+//https://codeforces.com/group/FWyJjChFAe/contest/328360/problem/J
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main(){
+	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+
+	int x;cin>>x;
+	if(x==1)return cout<<-1,0;
+	if(x&1)cout<<(x-3)/2<<" "<<1;
+	else cout<<x/2<<" "<<0;
+
+	return 0;
+}
